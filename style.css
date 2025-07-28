@@ -22,8 +22,8 @@ header {
 
 .container {
   width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -161,8 +161,8 @@ nav a:hover {
 }
 
 .card-servico {
-  width: 190px;
-  height: 254px;
+  width: 200px;
+  height: 210px;
   border-radius: 30px;
   background: #F6F6F6;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px white;
@@ -191,6 +191,15 @@ nav a:hover {
   gap: 20px;
   flex-wrap: wrap;
   padding: 60px 20px;
+}
+
+.servicos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  margin: 0 auto;
 }
 
 .accordion-wrapper {
@@ -242,22 +251,27 @@ nav a:hover {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 10px;
   background: #F9F9F9;
-  color: #333;
-  transition: max-height 0.4s ease;
+  color: black;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
 
 .accordion-content p {
-  padding: 15px 0;
+  padding: 10px 0;
   font-size: 14px;
   text-align: justify;
 }
 
 
 .accordion-item.active .accordion-content {
-  max-height: 400px;
+  max-height: 500px;
+  padding: 20px;
+  opacity: 1;
+  visibility: visible;
 }
 
 

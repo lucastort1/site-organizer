@@ -52,17 +52,21 @@ Assunto: ${assunto}`;
 }
 
 
-document.querySelectorAll('.accordion-header').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.parentElement;
-    const wrapper = item.parentElement;
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
 
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", function () {
+        const currentItem = this.parentElement;
+        const allItems = document.querySelectorAll(".accordion-item");
 
-    wrapper.querySelectorAll('.accordion-item').forEach(i => {
-      if (i !== item) i.classList.remove('active');
+        allItems.forEach((item) => {
+          if (item !== currentItem) {
+            item.classList.remove("active");
+          }
+        });
+
+        currentItem.classList.toggle("active");
+      });
     });
-
-
-    item.classList.toggle('active');
   });
-});
