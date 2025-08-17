@@ -17,18 +17,18 @@
       <div class="logo">
         <img src="assets/img/logo-branco.png" alt="Logo Fabi Tort"/>
       </div>
-      <nav class="menu-central">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav class="menu-central" id="menu">
         <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#como-trabalho">Trabalho</a></li>
-          <li><a href="#organizacoes">Organizações</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+          <li><a href="#servicos" onclick="closeMenu()">Serviços</a></li>
+          <li><a href="#como-trabalho" onclick="closeMenu()">Trabalho</a></li>
+          <li><a href="#organizacoes" onclick="closeMenu()">Organizações</a></li>
+          <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
 
   <section class="hero">
     <div class="slideshow">
@@ -38,7 +38,6 @@
     </div>
   </section>
 
-
   <main>
     <section class="sobre" id="sobre">
       <div class="container">
@@ -47,8 +46,8 @@
         </div>
         <div class="texto">
           <h2>Sobre</h2>
-          <p>Olá, sou Fabiana Tort Personal Organizer formada pela Yru, e com especialização em Luxo  Premium, Marcenaria Inteligente e Baby Organizer.</p>
-          <p>Formada há mais de 25 anos em Arquitetura e Urbanismo. Atuei durante muitos anos na área de arquitetura de interiores,  adquirindo assim um ótimo senso de espaço. Em 2014 conheci a profissão de PERSONAL ORGANIZER a qual me identifiquei muito e percebi que poderia transformar a vida atribulada das pessoas, entregando e encontrando soluções inteligentes, práticas e econômicas que facilite o dia a dia delas.</p>
+          <p>Olá, sou Fabiana Tort Personal Organizer formada pela Yru, e com especialização em Luxo Premium, Marcenaria Inteligente e Baby Organizer.</p>
+          <p>Formada há mais de 25 anos em Arquitetura e Urbanismo. Atuei durante muitos anos na área de arquitetura de interiores, adquirindo assim um ótimo senso de espaço. Em 2014 conheci a profissão de PERSONAL ORGANIZER a qual me identifiquei muito e percebi que poderia transformar a vida atribulada das pessoas, entregando e encontrando soluções inteligentes, práticas e econômicas que facilite o dia a dia delas.</p>
           <p>Organização é sinônimo de qualidade de vida, conforto e economia de tempo, além de trazer beleza e funcionalidade respeitando a individualidade de cada pessoa e de cada residência.</p>
         </div>
       </div>
@@ -85,7 +84,6 @@
         <h2>Como eu Trabalho</h2>
         <div class="accordion-wrapper">
 
-
           <div class="accordion-item">
             <div class="accordion-header">
               <img src="assets/img/icone1.png" alt="Visita Técnica">
@@ -95,10 +93,9 @@
               <p>Preciso conhecer o seu local.</p>
               <p>Será feita uma avaliação dos ambientes, móveis, objetos...</p>
               <p>Irei explicar como funciona todo o processo da organização</p>
-              <p>E num bate papo vou entender melhor sua individualidade, seus desejos e detectar os seus problemas, e assim vamos  alinhando as expectativas.</p>
+              <p>E num bate papo vou entender melhor sua individualidade, seus desejos e detectar os seus problemas, e assim vamos alinhando as expectativas.</p>
             </div>
           </div>
-
 
           <div class="accordion-item">
             <div class="accordion-header">
@@ -111,7 +108,6 @@
             </div>
           </div>
 
-
           <div class="accordion-item">
             <div class="accordion-header">
               <img src="assets/img/icone3.png" alt="Aprovação">
@@ -121,7 +117,6 @@
               <p>Com a proposta aprovada, definiremos uma data para iniciarmos a organização.</p>
             </div>
           </div>
-
 
           <div class="accordion-item">
             <div class="accordion-header">
@@ -133,7 +128,6 @@
             </div>
           </div>
 
-
           <div class="accordion-item">
             <div class="accordion-header">
               <img src="assets/img/icone5.png" alt="Execução">
@@ -144,11 +138,9 @@
             </div>
           </div>
 
-
         </div>
       </div>
     </section>
-
 
     <section class="carrossel" id="organizacoes">
       <div class="container">
@@ -183,7 +175,6 @@
       </div>
     </section>
 
-
     <section class="contato" id="contato">
       <div class="container">
         <h2>Precisa dar uma organizada em casa?<br>Entre em contato!</h2>
@@ -196,20 +187,19 @@
         </div>
         <textarea name="assunto" placeholder="Assunto" required></textarea>
         <button>
-            <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                    </svg>
-                </div>
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+              </svg>
             </div>
-            <span>Enviar</span>
+          </div>
+          <span>Enviar</span>
         </button>
       </form>
     </section>
   </main>
-
 
   <footer class="footer">
     <div class="container">
