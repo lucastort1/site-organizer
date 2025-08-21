@@ -174,6 +174,20 @@
       height: 60px;
     }
 
+    .servicos .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .titulo-secao {
+      font-size: 30px;
+      margin-bottom: 40px;
+      color: #A19072;
+      text-align: left;
+    }
+
     .card-servico h3 {
       font-size: 16px;
       font-weight: 600;
