@@ -40,12 +40,46 @@
 
     /* Menu Mobile Toggle */
     .menu-toggle {
-      display: none;
-      background: none;
+      display: none; /* Esconde no PC */
+      font-size: 2rem;
+      background: transparent;
       border: none;
-      font-size: 1.5rem;
-      color: #FFEBC4;
+      color: #FFEBC4; /* Cor das barras */
       cursor: pointer;
+      z-index: 1001;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(37, 153, 92, 0.95); /* verde do seu logo com transparência */
+      overflow-x: hidden;
+      transition: 0.5s;
+      z-index: 1000;
+    }
+
+    /* Conteúdo centralizado */
+    .overlay-content {
+      position: relative;
+      top: 30%;
+      width: 100%;
+      text-align: center;
+    }
+
+    .overlay-content a {
+      display: block;
+      font-size: 2rem;
+      padding: 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .overlay-content a:hover {
+      color: #000;
     }
 
     .menu-central {
@@ -157,7 +191,7 @@
 
     .card-servico {
       width: 200px;
-      height: 210px;
+      min-height: 210px;
       border-radius: 30px;
       background: #F6F6F6;
       box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px white;
@@ -503,31 +537,36 @@
 
       .menu-toggle {
         display: block;
-      }
-
-      .menu-central {
-        display: none;
         position: absolute;
-        top: 100%;
+        top: 20px;
+        right: 20px;
+      }
+
+      #menu {
+        position: fixed;
+        top: 0;
         left: 0;
+        height: 100vh; /* Tela inteira */
         width: 100%;
-        background: #A19072;
-        z-index: 999;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      }
-
-      .menu-central.active {
-        display: block;
-      }
-
-      .menu-central nav ul {
+        background: white; /* Pode trocar a cor aqui */
+        display: flex;
         flex-direction: column;
-        padding: 20px;
-        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateX(-100%); /* escondido */
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
       }
 
-      .menu-central nav a {
-        font-size: 16px;
+      #menu.active {
+        transform: translateX(0); /* aparece com animação */
+      }
+
+      #menu a {
+        font-size: 1.5rem;
+        color: #333;
+        text-decoration: none;
       }
 
       /* Hero Mobile */
@@ -680,5 +719,208 @@
       .formulario input,
       .formulario textarea {
         padding: 8px;
+      }
+    }
+
+    /* Evita scroll quando o menu mobile estiver aberto */
+    body.nav-open { overflow: hidden; }
+
+    /* Mobile: esconder o menu desktop */
+    @media (max-width: 768px) {
+      .menu-central { display: none; }
+    }
+
+    /* Desktop: esconder o menu mobile (#menu) e o botão */
+    @media (min-width: 769px) {
+      #menu { display: none !important; }
+      /* se já tiver .menu-toggle { display:none } no topo, esta linha é redundante, mas não faz mal */
+      .menu-toggle { display: none; }
+    }
+
+        /* COMO EU TRABALHO – fluxo numerado */
+    .processo { padding: 60px 0; background: #F6F6F6; }
+    .processo h2 { font-size: 30px; color: #A19072; text-align: center; margin-bottom: 35px; }
+
+    .processo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .processo-card {
+      position: relative;
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 20px 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .processo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0,0,0,.12);
+    }
+    .processo-card .badge {
+      position: absolute;
+      top: -12px; left: 16px;
+      background: #A19072;
+      color: #FFF4D8;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: .5px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    }
+    .processo-card img { width: 56px; height: 56px; margin: 6px auto 10px; display: block; }
+    .processo-card h3 { font-size: 18px; color: #A19072; margin-bottom: 8px; }
+    .processo-card p  { font-size: 14px; color: #333; line-height: 1.55; }
+
+    /* responsivo */
+    @media (max-width: 1024px) {
+      .processo-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .processo-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SERVIÇOS – texto sempre visível */
+    .card-servico { cursor: default; }
+    .card-servico .desc {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* --- Abas do carrossel --- */
+    .carrossel-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+    .carrossel-tabs .tab {
+      border: 1px solid #A19072;
+      background: #FFF4D8;
+      color: #A19072;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, transform .15s ease;
+    }
+    .carrossel-tabs .tab:hover { transform: translateY(-2px); }
+    .carrossel-tabs .tab.active {
+      background: #A19072;
+      color: #FFF4D8;
+    }
+
+    /* Panes (somente um visível) */
+    .carrossel-panes { width: 100%; }
+    .carrossel-pane { display: none; }
+    .carrossel-pane.active { display: block; }
+
+    /* Tabs roláveis em telas pequenas */
+    @media (max-width: 640px) {
+      .carrossel-tabs {
+        overflow-x: auto;
+        padding-bottom: 6px;
+        scrollbar-width: thin;
+      }
+    }
+
+        /* ===== SERVIÇOS – grid fluido + "Saiba mais" ===== */
+    .servicos { padding: 60px 0; }
+    .servicos .titulo-secao {
+      font-size: 30px;
+      margin-bottom: 32px;
+      color: #A19072;
+      text-align: left;
+    }
+
+    .servicos-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      padding: 0;
+      margin: 0;
+      justify-items: stretch;
+    }
+
+    .card-servico {
+      width: auto !important;
+      min-height: 0 !important;
+      text-align: left;
+      align-items: stretch;
+      padding: 24px;
+      gap: 10px;
+    }
+
+    .card-servico img { width: 56px; height: 56px; }
+    .card-servico h3 {
+      font-size: 18px;
+      color: #A19072;
+      margin-bottom: 4px;
+    }
+    .card-servico .desc {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    /* Nativo: details/summary como "Saiba mais" */
+    details.mais { margin-top: 6px; }
+    details.mais summary {
+      list-style: none;
+      cursor: pointer;
+      color: #A19072;
+      font-weight: 600;
+      user-select: none;
+    }
+    details.mais summary::-webkit-details-marker { display: none; }
+    details.mais summary::after {
+      content: " +";
+      font-weight: 700;
+    }
+    details.mais[open] summary::after { content: " −"; }
+    details.mais .extra {
+      margin-top: 8px;
+      display: grid;
+      gap: 8px;
+    }
+    details.mais .extra p {
+      font-size: 14px;
+      line-height: 1.55;
+      color: #333;
+    }
+
+    /* Mobile: ocupar toda a largura e crescer com o texto */
+    @media (max-width: 768px) {
+      .card-servico {
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px;
+      }
+    }
+
+        @media (min-width: 1024px) {
+      .servicos-grid {
+        /* 3 colunas fixas no desktop */
+        grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .servicos-grid {
+        /* 2 colunas no tablet */
+        grid-template-columns: repeat(2, minmax(260px, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .servicos-grid {
+        /* 1 coluna no mobile */
+        grid-template-columns: 1fr !important;
       }
     }
