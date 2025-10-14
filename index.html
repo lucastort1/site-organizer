@@ -13,34 +13,36 @@
 
 <body>
   <header>
-  <div class="container">
-    <div class="logo">
-      <img src="assets/img/logo-branco.png" alt="Logo Fabi Tort"/>
+    <div class="container">
+      <div class="logo">
+        <img src="assets/img/logo-branco.png" alt="Logo Fabi Tort"/>
+      </div>
+
+      <!-- Menu desktop -->
+      <nav class="menu-central" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-trabalho">Trabalho</a></li>
+          <li><a href="#organizacoes">Organizações</a></li>
+          <li><a href="#podcast">Mídia</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão e menu mobile -->
+      <button class="menu-toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+      <nav id="menu" class="menu-mobile" aria-label="Menu móvel">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-trabalho">Trabalho</a>
+        <a href="#organizacoes">Organizações</a>
+        <a href="#podcast">Mídia</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
-
-    <!-- Menu desktop -->
-    <nav class="menu-central" aria-label="Menu principal">
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#como-trabalho">Trabalho</a></li>
-        <li><a href="#organizacoes">Organizações</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <!-- Botão e menu mobile -->
-    <button class="menu-toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
-    <nav id="menu" class="menu-mobile" aria-label="Menu móvel">
-      <a href="#home">Home</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#como-trabalho">Trabalho</a>
-      <a href="#organizacoes">Organizações</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
 
   <section class="hero" id="home">
@@ -207,184 +209,203 @@
     </section>
 
     <section class="carrossel" id="organizacoes">
-  <div class="container">
-    <h2>Organizações</h2>
+      <div class="container">
+      <h2>Organizações</h2>
 
-    <!-- Abas das seções -->
-    <div class="carrossel-tabs" role="tablist" aria-label="Categorias de organizações">
-      <button id="tab-area-de-servico" class="tab active" role="tab" aria-selected="true" data-pane="sec-area-de-servico">Área de Serviço</button>
-      <button id="tab-banheiro" class="tab" role="tab" aria-selected="false" data-pane="sec-banheiro">Banheiro</button>
-      <button id="tab-brinquedoteca" class="tab" role="tab" aria-selected="false" data-pane="sec-brinquedoteca">Brinquedoteca</button>
-      <button id="tab-closet" class="tab" role="tab" aria-selected="false" data-pane="sec-closet">Closet</button>
-      <button id="tab-cozinha" class="tab" role="tab" aria-selected="false" data-pane="sec-cozinha">Cozinha</button>
-      <button id="tab-despensa" class="tab" role="tab" aria-selected="false" data-pane="sec-despensa">Despensa</button>
-      <button id="tab-loucaria" class="tab" role="tab" aria-selected="false" data-pane="sec-loucaria">Louçaria</button>
-      <button id="tab-rouparia" class="tab" role="tab" aria-selected="false" data-pane="sec-rouparia">Rouparia</button>
+      <!-- Abas das seções -->
+      <div class="carrossel-tabs" role="tablist" aria-label="Categorias de organizações">
+        <button id="tab-area-de-servico" class="tab active" role="tab" aria-selected="true" data-pane="sec-area-de-servico">Área de Serviço</button>
+        <button id="tab-banheiro" class="tab" role="tab" aria-selected="false" data-pane="sec-banheiro">Banheiro</button>
+        <button id="tab-brinquedoteca" class="tab" role="tab" aria-selected="false" data-pane="sec-brinquedoteca">Brinquedoteca</button>
+        <button id="tab-closet" class="tab" role="tab" aria-selected="false" data-pane="sec-closet">Closet</button>
+        <button id="tab-cozinha" class="tab" role="tab" aria-selected="false" data-pane="sec-cozinha">Cozinha</button>
+        <button id="tab-despensa" class="tab" role="tab" aria-selected="false" data-pane="sec-despensa">Despensa</button>
+        <button id="tab-loucaria" class="tab" role="tab" aria-selected="false" data-pane="sec-loucaria">Louçaria</button>
+        <button id="tab-rouparia" class="tab" role="tab" aria-selected="false" data-pane="sec-rouparia">Rouparia</button>
+      </div>
+
+      <!-- Paines (um carrossel por seção) -->
+      <div class="carrossel-panes">
+        <!-- 1) Área de Serviço -->
+        <div id="sec-area-de-servico" class="carrossel-pane active" role="tabpanel" aria-labelledby="tab-area-de-servico">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Área de Serviço/imagemA01.jpeg" alt="Área de serviço 1" loading="lazy" />
+              <img src="assets/img/Área de Serviço/imagemA02.jpeg" alt="Área de serviço 2" loading="lazy" />
+              <img src="assets/img/Área de Serviço/imagemA03.jpeg" alt="Área de serviço 3" loading="lazy" />
+              <img src="assets/img/Área de Serviço/imagemA04.jpeg" alt="Área de serviço 4" loading="lazy" />
+              <img src="assets/img/Área de Serviço/imagemA05.jpeg" alt="Área de serviço 5" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 2) Banheiro -->
+        <div id="sec-banheiro" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-banheiro">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Banheiro/imagemB01.jpeg" alt="Banheiro 1" loading="lazy" />
+              <img src="assets/img/Banheiro/imagemB02.jpeg" alt="Banheiro 2" loading="lazy" />
+              <img src="assets/img/Banheiro/imagemB03.jpeg" alt="Banheiro 3" loading="lazy" />
+              <img src="assets/img/Banheiro/imagemB04.jpeg" alt="Banheiro 4" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 3) Brinquedoteca -->
+        <div id="sec-brinquedoteca" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-brinquedoteca">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Brinquedoteca/imagemC01.jpeg" alt="Brinquedoteca 1" loading="lazy" />
+              <img src="assets/img/Brinquedoteca/imagemC02.jpeg" alt="Brinquedoteca 2" loading="lazy" />
+              <img src="assets/img/Brinquedoteca/imagemC03.jpeg" alt="Brinquedoteca 3" loading="lazy" />
+              <img src="assets/img/Brinquedoteca/imagemC04.jpeg" alt="Brinquedoteca 4" loading="lazy" />
+              <img src="assets/img/Brinquedoteca/imagemC05.jpeg" alt="Brinquedoteca 5" loading="lazy" />
+              <img src="assets/img/Brinquedoteca/imagemC06.jpeg" alt="Brinquedoteca 6" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 4) Closet -->
+        <div id="sec-closet" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-closet">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Closet/imagemD01.jpg" alt="Closet 1" loading="lazy" />
+              <img src="assets/img/Closet/imagemD02.jpg" alt="Closet 2" loading="lazy" />
+              <img src="assets/img/Closet/imagemD03.jpg" alt="Closet 3" loading="lazy" />
+              <img src="assets/img/Closet/imagemD04.jpg" alt="Closet 4" loading="lazy" />
+              <img src="assets/img/Closet/imagemD05.jpg" alt="Closet 5" loading="lazy" />
+              <img src="assets/img/Closet/imagemD06.jpg" alt="Closet 6" loading="lazy" />
+              <img src="assets/img/Closet/imagemD07.jpg" alt="Closet 7" loading="lazy" />
+              <img src="assets/img/Closet/imagemD08.jpg" alt="Closet 8" loading="lazy" />
+              <img src="assets/img/Closet/imagemD09.jpg" alt="Closet 9" loading="lazy" />
+              <img src="assets/img/Closet/imagemD11.jpg" alt="Closet 11" loading="lazy" />
+              <img src="assets/img/Closet/imagemD12.jpeg" alt="Closet 12" loading="lazy" />
+              <img src="assets/img/Closet/imagemD13.jpeg" alt="Closet 13" loading="lazy" />
+              <img src="assets/img/Closet/imagemD14.jpeg" alt="Closet 14" loading="lazy" />
+              <img src="assets/img/Closet/imagemD15.jpeg" alt="Closet 15" loading="lazy" />
+              <img src="assets/img/Closet/imagemD16.jpeg" alt="Closet 16" loading="lazy" />
+              <img src="assets/img/Closet/imagemD17.jpeg" alt="Closet 17" loading="lazy" />
+              <img src="assets/img/Closet/imagemD18.jpeg" alt="Closet 18" loading="lazy" />
+              <img src="assets/img/Closet/imagemD20.jpeg" alt="Closet 20" loading="lazy" />
+              <img src="assets/img/Closet/imagemD21.jpeg" alt="Closet 21" loading="lazy" />
+              <img src="assets/img/Closet/imagemD22.jpeg" alt="Closet 22" loading="lazy" />
+              <img src="assets/img/Closet/imagemD23.jpeg" alt="Closet 23" loading="lazy" />
+              <img src="assets/img/Closet/imagemD24.jpeg" alt="Closet 24" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 5) Cozinha -->
+        <div id="sec-cozinha" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-cozinha">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Cozinha/imagemE01.jpeg" alt="Cozinha 1" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE02.jpeg" alt="Cozinha 2" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE03.jpeg" alt="Cozinha 3" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE04.jpeg" alt="Cozinha 4" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE05.jpeg" alt="Cozinha 5" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE06.jpeg" alt="Cozinha 6" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE07.jpeg" alt="Cozinha 7" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE08.jpeg" alt="Cozinha 8" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE09.jpeg" alt="Cozinha 9" loading="lazy" />
+              <img src="assets/img/Cozinha/imagemE10.jpeg" alt="Cozinha 10" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 6) Despensa -->
+        <div id="sec-despensa" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-despensa">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Despensa/imagemF01.jpg" alt="Despensa 1" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF02.jpeg" alt="Despensa 2" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF03.jpeg" alt="Despensa 3" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF04.jpeg" alt="Despensa 4" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF05.jpeg" alt="Despensa 5" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF06.jpeg" alt="Despensa 6" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF07.jpeg" alt="Despensa 7" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF08.jpeg" alt="Despensa 8" loading="lazy" />
+              <img src="assets/img/Despensa/imagemF09.jpeg" alt="Despensa 9" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 7) Louçaria -->
+        <div id="sec-loucaria" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-loucaria">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Louçaria/imagemG01.jpg" alt="Louçaria 1" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG02.jpg" alt="Louçaria 2" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG03.jpg" alt="Louçaria 3" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG04.jpg" alt="Louçaria 4" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG05.jpg" alt="Louçaria 5" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG06.jpg" alt="Louçaria 6" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG07.jpg" alt="Louçaria 7" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG08.jpg" alt="Louçaria 8" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG09.jpg" alt="Louçaria 9" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG10.jpeg" alt="Louçaria 10" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG11.jpeg" alt="Louçaria 11" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG12.jpeg" alt="Louçaria 12" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG13.jpeg" alt="Louçaria 13" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG14.jpeg" alt="Louçaria 14" loading="lazy" />
+              <img src="assets/img/Louçaria/imagemG15.jpeg" alt="Louçaria 15" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- 8) Rouparia -->
+        <div id="sec-rouparia" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-rouparia">
+          <div class="carrossel-wrapper">
+            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
+            <div class="carrossel-imagens">
+              <img src="assets/img/Rouparia/imagemI01.jpg" alt="Rouparia 1" loading="lazy" />
+              <img src="assets/img/Rouparia/imagemI02.jpeg" alt="Rouparia 2" loading="lazy" />
+              <img src="assets/img/Rouparia/imagemI03.jpeg" alt="Rouparia 3" loading="lazy" />
+              <img src="assets/img/Rouparia/imagemI04.jpeg" alt="Rouparia 4" loading="lazy" />
+              <img src="assets/img/Rouparia/imagemI05.jpeg" alt="Rouparia 5" loading="lazy" />
+              <img src="assets/img/Rouparia/imagemI06.jpeg" alt="Rouparia 6" loading="lazy" />
+              <img src="assets/img/Rouparia/imagemI07.jpeg" alt="Rouparia 7" loading="lazy" />
+            </div>
+            <button class="seta direita" onclick="avancarSlide()">❯</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Paines (um carrossel por seção) -->
-    <div class="carrossel-panes">
-      <!-- 1) Área de Serviço -->
-      <div id="sec-area-de-servico" class="carrossel-pane active" role="tabpanel" aria-labelledby="tab-area-de-servico">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Área de Serviço/imagemA01.jpeg" alt="Área de serviço 1" loading="lazy" />
-            <img src="assets/img/Área de Serviço/imagemA02.jpeg" alt="Área de serviço 2" loading="lazy" />
-            <img src="assets/img/Área de Serviço/imagemA03.jpeg" alt="Área de serviço 3" loading="lazy" />
-            <img src="assets/img/Área de Serviço/imagemA04.jpeg" alt="Área de serviço 4" loading="lazy" />
-            <img src="assets/img/Área de Serviço/imagemA05.jpeg" alt="Área de serviço 5" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
+  <section id="podcast" class="secao">
+    <div class="container">
+      <h2>Mídia</h2>
 
-      <!-- 2) Banheiro -->
-      <div id="sec-banheiro" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-banheiro">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Banheiro/imagemB01.jpeg" alt="Banheiro 1" loading="lazy" />
-            <img src="assets/img/Banheiro/imagemB02.jpeg" alt="Banheiro 2" loading="lazy" />
-            <img src="assets/img/Banheiro/imagemB03.jpeg" alt="Banheiro 3" loading="lazy" />
-            <img src="assets/img/Banheiro/imagemB04.jpeg" alt="Banheiro 4" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
+      <div class="video-embed" aria-label="Player do podcast">
+        <iframe
+          src="https://www.youtube.com/embed/xdUn2Am49Ks?si=6sQnUWMyP6J8M2WO"
+          title="Podcast - PodChique"
+          loading="lazy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          ></iframe>
       </div>
-
-      <!-- 3) Brinquedoteca -->
-      <div id="sec-brinquedoteca" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-brinquedoteca">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Brinquedoteca/imagemC01.jpeg" alt="Brinquedoteca 1" loading="lazy" />
-            <img src="assets/img/Brinquedoteca/imagemC02.jpeg" alt="Brinquedoteca 2" loading="lazy" />
-            <img src="assets/img/Brinquedoteca/imagemC03.jpeg" alt="Brinquedoteca 3" loading="lazy" />
-            <img src="assets/img/Brinquedoteca/imagemC04.jpeg" alt="Brinquedoteca 4" loading="lazy" />
-            <img src="assets/img/Brinquedoteca/imagemC05.jpeg" alt="Brinquedoteca 5" loading="lazy" />
-            <img src="assets/img/Brinquedoteca/imagemC06.jpeg" alt="Brinquedoteca 6" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
-
-      <!-- 4) Closet -->
-      <div id="sec-closet" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-closet">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Closet/imagemD01.jpg" alt="Closet 1" loading="lazy" />
-            <img src="assets/img/Closet/imagemD02.jpg" alt="Closet 2" loading="lazy" />
-            <img src="assets/img/Closet/imagemD03.jpg" alt="Closet 3" loading="lazy" />
-            <img src="assets/img/Closet/imagemD04.jpg" alt="Closet 4" loading="lazy" />
-            <img src="assets/img/Closet/imagemD05.jpg" alt="Closet 5" loading="lazy" />
-            <img src="assets/img/Closet/imagemD06.jpg" alt="Closet 6" loading="lazy" />
-            <img src="assets/img/Closet/imagemD07.jpg" alt="Closet 7" loading="lazy" />
-            <img src="assets/img/Closet/imagemD08.jpg" alt="Closet 8" loading="lazy" />
-            <img src="assets/img/Closet/imagemD09.jpg" alt="Closet 9" loading="lazy" />
-            <img src="assets/img/Closet/imagemD11.jpg" alt="Closet 11" loading="lazy" />
-            <img src="assets/img/Closet/imagemD12.jpeg" alt="Closet 12" loading="lazy" />
-            <img src="assets/img/Closet/imagemD13.jpeg" alt="Closet 13" loading="lazy" />
-            <img src="assets/img/Closet/imagemD14.jpeg" alt="Closet 14" loading="lazy" />
-            <img src="assets/img/Closet/imagemD15.jpeg" alt="Closet 15" loading="lazy" />
-            <img src="assets/img/Closet/imagemD16.jpeg" alt="Closet 16" loading="lazy" />
-            <img src="assets/img/Closet/imagemD17.jpeg" alt="Closet 17" loading="lazy" />
-            <img src="assets/img/Closet/imagemD18.jpeg" alt="Closet 18" loading="lazy" />
-            <img src="assets/img/Closet/imagemD20.jpeg" alt="Closet 20" loading="lazy" />
-            <img src="assets/img/Closet/imagemD21.jpeg" alt="Closet 21" loading="lazy" />
-            <img src="assets/img/Closet/imagemD22.jpeg" alt="Closet 22" loading="lazy" />
-            <img src="assets/img/Closet/imagemD23.jpeg" alt="Closet 23" loading="lazy" />
-            <img src="assets/img/Closet/imagemD24.jpeg" alt="Closet 24" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
-
-      <!-- 5) Cozinha -->
-      <div id="sec-cozinha" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-cozinha">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Cozinha/imagemE01.jpeg" alt="Cozinha 1" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE02.jpeg" alt="Cozinha 2" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE03.jpeg" alt="Cozinha 3" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE04.jpeg" alt="Cozinha 4" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE05.jpeg" alt="Cozinha 5" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE06.jpeg" alt="Cozinha 6" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE07.jpeg" alt="Cozinha 7" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE08.jpeg" alt="Cozinha 8" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE09.jpeg" alt="Cozinha 9" loading="lazy" />
-            <img src="assets/img/Cozinha/imagemE10.jpeg" alt="Cozinha 10" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
-
-      <!-- 6) Despensa -->
-      <div id="sec-despensa" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-despensa">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Despensa/imagemF01.jpg" alt="Despensa 1" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF02.jpeg" alt="Despensa 2" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF03.jpeg" alt="Despensa 3" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF04.jpeg" alt="Despensa 4" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF05.jpeg" alt="Despensa 5" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF06.jpeg" alt="Despensa 6" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF07.jpeg" alt="Despensa 7" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF08.jpeg" alt="Despensa 8" loading="lazy" />
-            <img src="assets/img/Despensa/imagemF09.jpeg" alt="Despensa 9" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
-
-      <!-- 7) Louçaria -->
-      <div id="sec-loucaria" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-loucaria">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Louçaria/imagemG01.jpg" alt="Louçaria 1" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG02.jpg" alt="Louçaria 2" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG03.jpg" alt="Louçaria 3" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG04.jpg" alt="Louçaria 4" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG05.jpg" alt="Louçaria 5" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG06.jpg" alt="Louçaria 6" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG07.jpg" alt="Louçaria 7" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG08.jpg" alt="Louçaria 8" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG09.jpg" alt="Louçaria 9" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG10.jpeg" alt="Louçaria 10" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG11.jpeg" alt="Louçaria 11" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG12.jpeg" alt="Louçaria 12" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG13.jpeg" alt="Louçaria 13" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG14.jpeg" alt="Louçaria 14" loading="lazy" />
-            <img src="assets/img/Louçaria/imagemG15.jpeg" alt="Louçaria 15" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
-
-      <!-- 8) Rouparia -->
-      <div id="sec-rouparia" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-rouparia">
-        <div class="carrossel-wrapper">
-          <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-          <div class="carrossel-imagens">
-            <img src="assets/img/Rouparia/imagemI01.jpg" alt="Rouparia 1" loading="lazy" />
-            <img src="assets/img/Rouparia/imagemI02.jpeg" alt="Rouparia 2" loading="lazy" />
-            <img src="assets/img/Rouparia/imagemI03.jpeg" alt="Rouparia 3" loading="lazy" />
-            <img src="assets/img/Rouparia/imagemI04.jpeg" alt="Rouparia 4" loading="lazy" />
-            <img src="assets/img/Rouparia/imagemI05.jpeg" alt="Rouparia 5" loading="lazy" />
-            <img src="assets/img/Rouparia/imagemI06.jpeg" alt="Rouparia 6" loading="lazy" />
-            <img src="assets/img/Rouparia/imagemI07.jpeg" alt="Rouparia 7" loading="lazy" />
-          </div>
-          <button class="seta direita" onclick="avancarSlide()">❯</button>
-        </div>
-      </div>
+      <p class="video-caption">
+        Estive no PodChique para um papo super leve sobre “Organizar a vida com auxílio profissional”. Contei um pouco da minha trajetória, os erros mais comuns que vejo no dia a dia e os primeiros passos que uso com minhas clientes para ganhar tempo e paz em casa. Se você quer começar hoje, tem dicas simples e realistas no episódio.
+      </p>
     </div>
-  </div>
-</section>
-
+  </section>
 
     <section class="contato" id="contato">
       <div class="container">
