@@ -1,478 +1,438 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fabi Tort Organizer</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- ===================== META E SEO ===================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabi Tort Organizer | Personal organizer em São Paulo</title>
+  <meta name="description" content="Fabiana Tort, personal organizer em São Paulo com mais de 25 anos de formação em Arquitetura. Organização residencial, pós-mudança, baby, closets, cozinhas e manutenção.">
+  <link rel="canonical" href="https://www.fabitortorganizer.com/">
+  <meta name="theme-color" content="#7D6D52">
+
+  <!-- Pré-visualização ao compartilhar o link (WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Fabi Tort Organizer">
+  <meta property="og:title" content="Fabi Tort Organizer | Organização com olhar de arquiteta">
+  <meta property="og:description" content="Personal organizer em São Paulo. Sistemas de organização sob medida para closets, cozinhas, quartos de bebê e mudanças.">
+  <meta property="og:url" content="https://www.fabitortorganizer.com/">
+  <meta property="og:image" content="https://www.fabitortorganizer.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos e scripts -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="assets/img/logo-branco.png" alt="Logo Fabi Tort"/>
-      </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-      <!-- Menu desktop -->
-      <nav class="menu-central" aria-label="Menu principal">
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Fabi Tort Organizer, início">
+        <img src="assets/img/logo-branco.png" alt="Fabi Tort Organizer" width="1014" height="750">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Menu principal">
         <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#como-trabalho">Trabalho</a></li>
-          <li><a href="#organizacoes">Organizações</a></li>
-          <li><a href="#podcast">Mídia</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li><a class="nav-link" href="#como-trabalho">Como trabalho</a></li>
+          <li><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li><a class="nav-link" href="#organizacoes">Organizações</a></li>
+          <li><a class="nav-link" href="#midia">Mídia</a></li>
         </ul>
+        <a class="btn btn-creme" href="#contato">Agendar visita</a>
       </nav>
 
-      <!-- Botão e menu mobile -->
-      <button class="menu-toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
-      <nav id="menu" class="menu-mobile" aria-label="Menu móvel">
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#como-trabalho">Trabalho</a>
-        <a href="#organizacoes">Organizações</a>
-        <a href="#podcast">Mídia</a>
-        <a href="#contato">Contato</a>
-      </nav>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+      </button>
     </div>
   </header>
 
+  <!-- ===================== MENU MOBILE ===================== -->
+  <nav class="menu-mobile" id="menu-mobile" aria-label="Menu" aria-hidden="true">
+    <a href="#home">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#como-trabalho">Como trabalho</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#organizacoes">Organizações</a>
+    <a href="#midia">Mídia</a>
+    <a class="btn btn-creme" href="#contato">Agendar visita</a>
+  </nav>
 
-  <section class="hero" id="home">
-    <div class="slideshow">
-      <img loading="lazy" src="assets/img/Louçaria/imagemG04.jpg" class="slide active" alt="Imagem 1">
-      <img loading="lazy" src="assets/img/Closet/imagemD01.jpg" class="slide" alt="Imagem 2">
-      <img loading="lazy" src="assets/img/Closet/imagemD02.jpg" class="slide" alt="Imagem 3">
-      <img loading="lazy" src="assets/img/Closet/imagemD09.jpg" class="slide" alt="Imagem 4">
-    </div>
-  </section>
+  <main id="conteudo">
 
-  <main>
+    <!-- ===================== TOPO (HERO) ===================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-texto">
+          <h1 class="entrada">Organização com olhar de arquiteta</h1>
+          <p class="hero-lead entrada d1">Sou Fabiana Tort, personal organizer em São Paulo. Crio sistemas de organização sob medida para closets, cozinhas, quartos de bebê e mudanças, pensados para funcionar na rotina real da sua casa.</p>
+          <div class="hero-acoes entrada d2">
+            <a class="btn btn-primario" href="#contato">Agendar visita técnica</a>
+            <a class="link-sublinhado" href="#organizacoes">Ver organizações</a>
+          </div>
+          <dl class="credenciais entrada d3">
+            <div>
+              <dt>25+ anos</dt>
+              <dd>de formação em Arquitetura e Urbanismo</dd>
+            </div>
+            <div>
+              <dt>Desde 2014</dt>
+              <dd>atuando como personal organizer</dd>
+            </div>
+            <div>
+              <dt>Formação Yru</dt>
+              <dd>com especialização em Luxo Premium, Marcenaria Inteligente e Baby Organizer</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <div class="arco arco-hero">
+            <div class="arco-foto entrada-arco">
+              <img class="hero-slide is-active" src="assets/img/Closet/imagemD10.jpg" alt="Closet com roupas dobradas e organizadas" fetchpriority="high">
+              <img class="hero-slide" src="assets/img/Louçaria/imagemG12.jpeg" alt="Louçaria organizada em prateleiras">
+              <img class="hero-slide" src="assets/img/Rouparia/imagemI07.jpeg" alt="Rouparia com toalhas dobradas">
+            </div>
+          </div>
+          <div class="hero-dots" role="group" aria-label="Fotos em destaque">
+            <button type="button" class="hero-dot is-active" aria-label="Mostrar foto 1" aria-pressed="true"><span></span></button>
+            <button type="button" class="hero-dot" aria-label="Mostrar foto 2" aria-pressed="false"><span></span></button>
+            <button type="button" class="hero-dot" aria-label="Mostrar foto 3" aria-pressed="false"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
     <section class="sobre" id="sobre">
-      <div class="container">
-        <div class="imagem">
-          <img src="assets/img/foto-mae.jpg" alt="Fabiana A C Tort" />
+      <div class="container sobre-grid">
+        <div class="arco arco-retrato">
+          <img src="assets/img/foto-mae.jpg" alt="Fabiana Tort sentada em uma poltrona" loading="lazy">
         </div>
-        <div class="texto">
-          <h2>Sobre</h2>
-          <p>Olá, sou Fabiana Tort Personal Organizer formada pela Yru, e com especialização em Luxo Premium, Marcenaria Inteligente e Baby Organizer.</p>
-          <p>Formada há mais de 25 anos em Arquitetura e Urbanismo. Atuei durante muitos anos na área de arquitetura de interiores, adquirindo assim um ótimo senso de espaço. Em 2014 conheci a profissão de PERSONAL ORGANIZER a qual me identifiquei muito e percebi que poderia transformar a vida atribulada das pessoas, entregando e encontrando soluções inteligentes, práticas e econômicas que facilite o dia a dia delas.</p>
-          <p>Organização é sinônimo de qualidade de vida, conforto e economia de tempo, além de trazer beleza e funcionalidade respeitando a individualidade de cada pessoa e de cada residência.</p>
+        <div class="sobre-texto">
+          <h2 class="titulo-secao">Sobre mim</h2>
+          <p>Olá, sou Fabiana Tort, personal organizer formada pela Yru, com especialização em Luxo Premium, Marcenaria Inteligente e Baby Organizer.</p>
+          <p>Sou formada há mais de 25 anos em Arquitetura e Urbanismo e atuei durante muitos anos em arquitetura de interiores, o que me deu um ótimo senso de espaço. Em 2014 conheci a profissão de personal organizer, com a qual me identifiquei muito, e percebi que poderia transformar a vida atribulada das pessoas com soluções inteligentes, práticas e econômicas que facilitam o dia a dia.</p>
+          <blockquote class="citacao">
+            <p>Organização é sinônimo de qualidade de vida, conforto e economia de tempo, além de trazer beleza e funcionalidade respeitando a individualidade de cada pessoa e de cada residência.</p>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="trabalho" id="como-trabalho">
+    <!-- ===================== COMO EU TRABALHO ===================== -->
+    <section class="processo" id="como-trabalho">
       <div class="container">
-        <h2>Como eu trabalho</h2>
+        <div class="secao-cabecalho">
+          <h2 class="titulo-secao">Como eu trabalho</h2>
+          <p>Do primeiro contato à casa organizada, cada etapa é combinada com você, no seu tempo e de acordo com a sua rotina.</p>
+        </div>
 
-        <div class="processo-grid">
-          <article class="processo-card">
-            <span class="badge">01</span>
-            <img src="assets/img/icone1.png" alt="" aria-hidden="true">
-            <h3>Visita Técnica</h3>
-            <p>Preciso conhecer o local, entender as necessidades e rotina do cliente.</p>
-            <p>Cada espaço da casa será avaliado, para identificar áreas problemáticas e desenvolver soluções que realmente facilitem o dia a dia dos moradores, ajustadas ao estilo de vida do cliente.</p>
-            <p>Será explicado como funciona todo o processo da organização e num bate papo vou entender melhor sua individualidade, seus desejos e detectar os seus problemas, e assim vamos  alinhando as expectativas.</p>
-          </article>
-
-          <article class="processo-card">
-            <span class="badge">02</span>
-            <img src="assets/img/icone2.png" alt="" aria-hidden="true">
+        <ol class="etapas">
+          <li class="etapa">
+            <span class="etapa-num" aria-hidden="true">01</span>
+            <h3>Visita técnica</h3>
+            <p>Conheço o local, as necessidades e a rotina de quem vive ali. Cada espaço é avaliado para identificar os pontos problemáticos e, num bate-papo, explico todo o processo e alinhamos as expectativas.</p>
+          </li>
+          <li class="etapa">
+            <span class="etapa-num" aria-hidden="true">02</span>
             <h3>Proposta</h3>
-            <p>Com todas as informações fornecidas pela(o) cliente, farei uma análise e irei elaborar o seu orçamento.</p>
-            <p>Será enviada uma proposta detalhada e personalizada de acordo com as suas necessidades.</p>
-          </article>
-
-          <article class="processo-card">
-            <span class="badge">03</span>
-            <img src="assets/img/icone3.png" alt="" aria-hidden="true">
+            <p>Com as informações da visita, faço uma análise e envio uma proposta detalhada e personalizada, de acordo com as suas necessidades.</p>
+          </li>
+          <li class="etapa">
+            <span class="etapa-num" aria-hidden="true">03</span>
             <h3>Aprovação</h3>
-            <p>Com a proposta aprovada, definiremos uma data que melhor se encaixe na agenda do cliente e da profissional contratada para iniciarmos a organização.</p>
-          </article>
-
-          <article class="processo-card">
-            <span class="badge">04</span>
-            <img src="assets/img/icone4.png" alt="" aria-hidden="true">
+            <p>Com a proposta aprovada, definimos a data que melhor se encaixa na sua agenda e na da equipe para iniciar a organização.</p>
+          </li>
+          <li class="etapa">
+            <span class="etapa-num" aria-hidden="true">04</span>
             <h3>Planejamento</h3>
-            <p>Com base na avaliação, é criado um plano personalizado, para organizar cada ambiente. São definidas as prioridades, a categorização dos itens e são sugeridas métodos de organização e acessórios de organização eficientes, sempre considerando suas preferências e o que melhor funciona para o perfil do cliente.</p>
-            <p>Cada item será organizado em locais funcionais e estratégicos, criando sistemas de organização que tornam o espaço prático, acessível e fácil de manter no dia a dia, com o objetivo de simplificar e facilitar a rotina diária e a manutenção da organização.</p>
-          </article>
-
-          <article class="processo-card">
-            <span class="badge">05</span>
-            <img src="assets/img/icone5.png" alt="" aria-hidden="true">
-            <h3>Triagem e Descarte</h3>
-            <p>A Personal Organizer auxilia e acompanha o processo de triagem dos itens, ajudando o cliente a decidir o que manter, doar ou descartar. Isso garante que só o que realmente importa permaneça, liberando espaço e eliminando a sensação de acúmulo desnecessário.</p>
-          </article>
-
-          <article class="processo-card">
-            <span class="badge">06</span>
-            <img src="assets/img/icone6.png" alt="" aria-hidden="true">
+            <p>Crio um plano para cada ambiente, com prioridades, categorias de itens, métodos e acessórios de organização, sempre considerando suas preferências e o perfil da casa.</p>
+          </li>
+          <li class="etapa">
+            <span class="etapa-num" aria-hidden="true">05</span>
+            <h3>Triagem e descarte</h3>
+            <p>Acompanho a triagem dos itens e ajudo você a decidir o que manter, doar ou descartar, para que permaneça só o que realmente importa.</p>
+          </li>
+          <li class="etapa">
+            <span class="etapa-num" aria-hidden="true">06</span>
             <h3>Execução</h3>
-            <p>A equipe irá executar a organização de acordo com as expectativas.</p>
-            <p>Cada item será organizado em locais funcionais e estratégicos, criando sistemas de organização que tornam o espaço prático, acessível e fácil de manter no dia a dia, com o objetivo de simplificar e facilitar a rotina diária e a manutenção da organização.</p>
-          </article>
-        </div>
+            <p>A equipe organiza cada item em locais funcionais e estratégicos, criando um sistema prático, acessível e fácil de manter no dia a dia.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-
+    <!-- ===================== SERVIÇOS ===================== -->
     <section class="servicos" id="servicos">
       <div class="container">
-        <h2 class="titulo-secao">Serviços</h2>
+        <div class="secao-cabecalho">
+          <h2 class="titulo-secao">Serviços</h2>
+          <p>Soluções sob medida para cada momento da casa, da mudança à manutenção.</p>
+        </div>
 
         <div class="servicos-grid">
-          <article class="card-servico">
-            <img src="assets/img/icone8.png" alt="">
-            <h3>Organização Pós Mudança e Recém Casados</h3>
-            <p class="desc">Chega de estresse só porque vai para um novo lar.</p>
-            <details class="mais">
-              <summary>Saiba mais</summary>
-              <div class="extra">
+          <article class="servico">
+            <svg class="servico-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg>
+            <h3>Pós-mudança e recém-casados</h3>
+            <p>Chega de estresse só porque vai para um novo lar.</p>
+            <div class="servico-extra" id="servico-extra-1">
+              <div>
                 <p>Transformo sua mudança em uma experiência tranquila e organizada, criando soluções sob medida para que tudo faça sentido no seu novo lar.</p>
                 <p>Desembalamos, categorizamos e implementamos um sistema funcional, deixando seu lar pronto desde o primeiro momento.</p>
               </div>
-            </details>
+            </div>
+            <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-extra-1"><span>Saiba mais</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
           </article>
 
-          <article class="card-servico">
-            <img src="assets/img/icone7.png" alt="">
-            <h3>Organização Residencial</h3>
-            <p class="desc">Transformo seu espaço em um ambiente prático e funcional, com soluções sob medida para closets, cozinhas, home offices, louceiros, roupeiros, quartos de crianças e muito mais.</p>
-            <details class="mais">
-              <summary>Saiba mais</summary>
-              <div class="extra">
-                <p>Seu lar se transformará num espaço acolhedor, trazendo mais harmonia e conforto para o seu dia a dia.</p>
+          <article class="servico">
+            <svg class="servico-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v12h14V9"/><path d="M10 21v-6h4v6"/></svg>
+            <h3>Organização residencial</h3>
+            <p>Closets, cozinhas, home offices, louceiros, roupeiros, quartos de crianças e muito mais.</p>
+            <div class="servico-extra" id="servico-extra-2">
+              <div>
+                <p>Seu lar se transforma num espaço acolhedor, prático e funcional, trazendo mais harmonia e conforto para o seu dia a dia.</p>
               </div>
-            </details>
+            </div>
+            <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-extra-2"><span>Saiba mais</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
           </article>
 
-          <article class="card-servico">
-            <img src="assets/img/icone9.png" alt="">
-            <h3>Organização Baby</h3>
-            <p class="desc">Que momento especial! Leveza e praticidade para a chegada do bebê.</p>
-            <details class="mais">
-              <summary>Saiba mais</summary>
-              <div class="extra">
-                <p>E com ele muitas mudanças, sentimentos e também uma dose de preocupação.</p>
-                <p>Preparo cada detalhe do quartinho do seu bebê para que ele seja aconchegante, funcional e adaptado às necessidades do bebê ou da criança em crescimento.</p>
-                <p>Organizo tudo de forma intuitiva, garantindo mais leveza e tranquilidade nesse momento tão especial.</p>
+          <article class="servico">
+            <svg class="servico-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+            <h3>Organização baby</h3>
+            <p>Leveza e praticidade para a chegada do bebê.</p>
+            <div class="servico-extra" id="servico-extra-3">
+              <div>
+                <p>Preparo cada detalhe do quartinho para que ele seja aconchegante, funcional e adaptado às necessidades do bebê e da criança em crescimento.</p>
+                <p>Organizo tudo de forma intuitiva, garantindo mais tranquilidade nesse momento tão especial.</p>
               </div>
-            </details>
+            </div>
+            <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-extra-3"><span>Saiba mais</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
           </article>
 
-          <article class="card-servico">
-            <img src="assets/img/icone10.png" alt="">
-            <h3>Presente</h3>
-            <p class="desc">Dê organização de presente para quem você ama.</p>
-            <details class="mais">
-              <summary>Saiba mais</summary>
-              <div class="extra">
-                <p>Para sua mãe, seu pai, seu parceiro(a), amigos, recém-casados, aniversário, dia dos namorados, etc.</p>
+          <article class="servico">
+            <svg class="servico-icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4"/><path d="M5 12v9h14v-9M12 8v13"/><path d="M12 8S10.5 3 8 3.8C6 4.5 7 8 12 8zm0 0s1.5-5 4-4.2C18 4.5 17 8 12 8z"/></svg>
+            <h3>Organização de presente</h3>
+            <p>Dê organização de presente para quem você ama.</p>
+            <div class="servico-extra" id="servico-extra-4">
+              <div>
+                <p>Para sua mãe, seu pai, seu parceiro ou parceira, amigos e recém-casados, em aniversários, Dia dos Namorados e outras datas especiais.</p>
               </div>
-            </details>
+            </div>
+            <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-extra-4"><span>Saiba mais</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
           </article>
 
-          <article class="card-servico">
-            <img src="assets/img/icone11.png" alt="">
-            <h3>Treinamento de Funcionários</h3>
-            <p class="desc">Capacitação para incorporar os métodos do Personal Organizer no dia a dia.</p>
-            <details class="mais">
-              <summary>Saiba mais</summary>
-              <div class="extra">
-                <p>Ensinamos as técnicas utilizadas na sua organização para que tudo se mantenha após a saída da equipe.</p>
+          <article class="servico">
+            <svg class="servico-icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 4h6v6h-4"/></svg>
+            <h3>Treinamento de funcionários</h3>
+            <p>Capacitação para incorporar os métodos da organização ao dia a dia da casa.</p>
+            <div class="servico-extra" id="servico-extra-5">
+              <div>
+                <p>Ensinamos as técnicas usadas na organização para que tudo se mantenha depois da saída da equipe.</p>
               </div>
-            </details>
+            </div>
+            <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-extra-5"><span>Saiba mais</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
           </article>
 
-          <article class="card-servico">
-            <img src="assets/img/icone12.png" alt="">
-            <h3>Manutenção da Organização</h3>
-            <p class="desc">Mantemos seu sistema funcionando a longo prazo.</p>
-            <details class="mais">
-              <summary>Saiba mais</summary>
-              <div class="extra">
-                <p>Após a organização finalizada, orientamos sobre manutenção e oferecemos visitas periódicas ou pontuais para ajustes conforme a dinâmica da casa.</p>
+          <article class="servico">
+            <svg class="servico-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9"/><path d="M4 12a8 8 0 0 1 14.3-4.9"/><path d="M18.5 3v4.5H14M5.5 21v-4.5H10"/></svg>
+            <h3>Manutenção da organização</h3>
+            <p>Mantemos o seu sistema funcionando a longo prazo.</p>
+            <div class="servico-extra" id="servico-extra-6">
+              <div>
+                <p>Depois da organização, orientamos sobre a manutenção e oferecemos visitas periódicas ou pontuais para ajustes conforme a dinâmica da casa.</p>
               </div>
-            </details>
+            </div>
+            <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-extra-6"><span>Saiba mais</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="carrossel" id="organizacoes">
+    <!-- ===================== ORGANIZAÇÕES (GALERIA) ===================== -->
+    <!-- As fotos de cada categoria ficam listadas no script.js (bloco GALERIA). -->
+    <section class="galeria" id="organizacoes">
       <div class="container">
-      <h2>Organizações</h2>
-
-      <!-- Abas das seções -->
-      <div class="carrossel-tabs" role="tablist" aria-label="Categorias de organizações">
-        <button id="tab-area-de-servico" class="tab active" role="tab" aria-selected="true" data-pane="sec-area-de-servico">Área de Serviço</button>
-        <button id="tab-banheiro" class="tab" role="tab" aria-selected="false" data-pane="sec-banheiro">Banheiro</button>
-        <button id="tab-brinquedoteca" class="tab" role="tab" aria-selected="false" data-pane="sec-brinquedoteca">Brinquedoteca</button>
-        <button id="tab-closet" class="tab" role="tab" aria-selected="false" data-pane="sec-closet">Closet</button>
-        <button id="tab-cozinha" class="tab" role="tab" aria-selected="false" data-pane="sec-cozinha">Cozinha</button>
-        <button id="tab-despensa" class="tab" role="tab" aria-selected="false" data-pane="sec-despensa">Despensa</button>
-        <button id="tab-loucaria" class="tab" role="tab" aria-selected="false" data-pane="sec-loucaria">Louçaria</button>
-        <button id="tab-rouparia" class="tab" role="tab" aria-selected="false" data-pane="sec-rouparia">Rouparia</button>
-      </div>
-
-      <!-- Paines (um carrossel por seção) -->
-      <div class="carrossel-panes">
-        <!-- 1) Área de Serviço -->
-        <div id="sec-area-de-servico" class="carrossel-pane active" role="tabpanel" aria-labelledby="tab-area-de-servico">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Área de Serviço/imagemA01.jpeg" alt="Área de serviço 1" loading="lazy" />
-              <img src="assets/img/Área de Serviço/imagemA02.jpeg" alt="Área de serviço 2" loading="lazy" />
-              <img src="assets/img/Área de Serviço/imagemA03.jpeg" alt="Área de serviço 3" loading="lazy" />
-              <img src="assets/img/Área de Serviço/imagemA04.jpeg" alt="Área de serviço 4" loading="lazy" />
-              <img src="assets/img/Área de Serviço/imagemA05.jpeg" alt="Área de serviço 5" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
+        <div class="secao-cabecalho">
+          <h2 class="titulo-secao">Organizações</h2>
+          <p>Alguns dos ambientes que organizei. Escolha uma categoria para ver as fotos em tela cheia.</p>
         </div>
 
-        <!-- 2) Banheiro -->
-        <div id="sec-banheiro" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-banheiro">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Banheiro/imagemB01.jpeg" alt="Banheiro 1" loading="lazy" />
-              <img src="assets/img/Banheiro/imagemB02.jpeg" alt="Banheiro 2" loading="lazy" />
-              <img src="assets/img/Banheiro/imagemB03.jpeg" alt="Banheiro 3" loading="lazy" />
-              <img src="assets/img/Banheiro/imagemB04.jpeg" alt="Banheiro 4" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
-        </div>
-
-        <!-- 3) Brinquedoteca -->
-        <div id="sec-brinquedoteca" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-brinquedoteca">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Brinquedoteca/imagemC01.jpeg" alt="Brinquedoteca 1" loading="lazy" />
-              <img src="assets/img/Brinquedoteca/imagemC02.jpeg" alt="Brinquedoteca 2" loading="lazy" />
-              <img src="assets/img/Brinquedoteca/imagemC03.jpeg" alt="Brinquedoteca 3" loading="lazy" />
-              <img src="assets/img/Brinquedoteca/imagemC04.jpeg" alt="Brinquedoteca 4" loading="lazy" />
-              <img src="assets/img/Brinquedoteca/imagemC05.jpeg" alt="Brinquedoteca 5" loading="lazy" />
-              <img src="assets/img/Brinquedoteca/imagemC06.jpeg" alt="Brinquedoteca 6" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
-        </div>
-
-        <!-- 4) Closet -->
-        <div id="sec-closet" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-closet">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Closet/imagemD01.jpg" alt="Closet 1" loading="lazy" />
-              <img src="assets/img/Closet/imagemD02.jpg" alt="Closet 2" loading="lazy" />
-              <img src="assets/img/Closet/imagemD03.jpg" alt="Closet 3" loading="lazy" />
-              <img src="assets/img/Closet/imagemD04.jpg" alt="Closet 4" loading="lazy" />
-              <img src="assets/img/Closet/imagemD05.jpg" alt="Closet 5" loading="lazy" />
-              <img src="assets/img/Closet/imagemD06.jpg" alt="Closet 6" loading="lazy" />
-              <img src="assets/img/Closet/imagemD07.jpg" alt="Closet 7" loading="lazy" />
-              <img src="assets/img/Closet/imagemD08.jpg" alt="Closet 8" loading="lazy" />
-              <img src="assets/img/Closet/imagemD09.jpg" alt="Closet 9" loading="lazy" />
-              <img src="assets/img/Closet/imagemD11.jpg" alt="Closet 11" loading="lazy" />
-              <img src="assets/img/Closet/imagemD12.jpeg" alt="Closet 12" loading="lazy" />
-              <img src="assets/img/Closet/imagemD13.jpeg" alt="Closet 13" loading="lazy" />
-              <img src="assets/img/Closet/imagemD14.jpeg" alt="Closet 14" loading="lazy" />
-              <img src="assets/img/Closet/imagemD15.jpeg" alt="Closet 15" loading="lazy" />
-              <img src="assets/img/Closet/imagemD16.jpeg" alt="Closet 16" loading="lazy" />
-              <img src="assets/img/Closet/imagemD17.jpeg" alt="Closet 17" loading="lazy" />
-              <img src="assets/img/Closet/imagemD18.jpeg" alt="Closet 18" loading="lazy" />
-              <img src="assets/img/Closet/imagemD20.jpeg" alt="Closet 20" loading="lazy" />
-              <img src="assets/img/Closet/imagemD21.jpeg" alt="Closet 21" loading="lazy" />
-              <img src="assets/img/Closet/imagemD22.jpeg" alt="Closet 22" loading="lazy" />
-              <img src="assets/img/Closet/imagemD23.jpeg" alt="Closet 23" loading="lazy" />
-              <img src="assets/img/Closet/imagemD24.jpeg" alt="Closet 24" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
-        </div>
-
-        <!-- 5) Cozinha -->
-        <div id="sec-cozinha" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-cozinha">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Cozinha/imagemE01.jpeg" alt="Cozinha 1" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE02.jpeg" alt="Cozinha 2" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE03.jpeg" alt="Cozinha 3" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE04.jpeg" alt="Cozinha 4" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE05.jpeg" alt="Cozinha 5" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE06.jpeg" alt="Cozinha 6" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE07.jpeg" alt="Cozinha 7" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE08.jpeg" alt="Cozinha 8" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE09.jpeg" alt="Cozinha 9" loading="lazy" />
-              <img src="assets/img/Cozinha/imagemE10.jpeg" alt="Cozinha 10" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
-        </div>
-
-        <!-- 6) Despensa -->
-        <div id="sec-despensa" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-despensa">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Despensa/imagemF01.jpg" alt="Despensa 1" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF02.jpeg" alt="Despensa 2" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF03.jpeg" alt="Despensa 3" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF04.jpeg" alt="Despensa 4" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF05.jpeg" alt="Despensa 5" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF06.jpeg" alt="Despensa 6" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF07.jpeg" alt="Despensa 7" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF08.jpeg" alt="Despensa 8" loading="lazy" />
-              <img src="assets/img/Despensa/imagemF09.jpeg" alt="Despensa 9" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
-        </div>
-
-        <!-- 7) Louçaria -->
-        <div id="sec-loucaria" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-loucaria">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Louçaria/imagemG01.jpg" alt="Louçaria 1" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG02.jpg" alt="Louçaria 2" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG03.jpg" alt="Louçaria 3" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG04.jpg" alt="Louçaria 4" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG05.jpg" alt="Louçaria 5" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG06.jpg" alt="Louçaria 6" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG07.jpg" alt="Louçaria 7" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG08.jpg" alt="Louçaria 8" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG09.jpg" alt="Louçaria 9" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG10.jpeg" alt="Louçaria 10" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG11.jpeg" alt="Louçaria 11" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG12.jpeg" alt="Louçaria 12" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG13.jpeg" alt="Louçaria 13" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG14.jpeg" alt="Louçaria 14" loading="lazy" />
-              <img src="assets/img/Louçaria/imagemG15.jpeg" alt="Louçaria 15" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
-        </div>
-
-        <!-- 8) Rouparia -->
-        <div id="sec-rouparia" class="carrossel-pane" role="tabpanel" aria-labelledby="tab-rouparia">
-          <div class="carrossel-wrapper">
-            <button class="seta esquerda" onclick="voltarSlide()">❮</button>
-            <div class="carrossel-imagens">
-              <img src="assets/img/Rouparia/imagemI01.jpg" alt="Rouparia 1" loading="lazy" />
-              <img src="assets/img/Rouparia/imagemI02.jpeg" alt="Rouparia 2" loading="lazy" />
-              <img src="assets/img/Rouparia/imagemI03.jpeg" alt="Rouparia 3" loading="lazy" />
-              <img src="assets/img/Rouparia/imagemI04.jpeg" alt="Rouparia 4" loading="lazy" />
-              <img src="assets/img/Rouparia/imagemI05.jpeg" alt="Rouparia 5" loading="lazy" />
-              <img src="assets/img/Rouparia/imagemI06.jpeg" alt="Rouparia 6" loading="lazy" />
-              <img src="assets/img/Rouparia/imagemI07.jpeg" alt="Rouparia 7" loading="lazy" />
-            </div>
-            <button class="seta direita" onclick="avancarSlide()">❯</button>
-          </div>
+        <div class="galeria-grid">
+          <button class="tile tile-destaque" type="button" data-categoria="closet">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Closet/imagemD05.jpg" alt="Closet organizado" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Closet</span><span class="tile-qtd">22 fotos</span></span>
+          </button>
+          <button class="tile" type="button" data-categoria="cozinha">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Cozinha/imagemE07.jpeg" alt="Cozinha organizada" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Cozinha</span><span class="tile-qtd">10 fotos</span></span>
+          </button>
+          <button class="tile" type="button" data-categoria="despensa">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Despensa/imagemF01.jpg" alt="Despensa organizada" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Despensa</span><span class="tile-qtd">9 fotos</span></span>
+          </button>
+          <button class="tile" type="button" data-categoria="rouparia">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Rouparia/imagemI06.jpeg" alt="Rouparia organizada" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Rouparia</span><span class="tile-qtd">7 fotos</span></span>
+          </button>
+          <button class="tile" type="button" data-categoria="brinquedoteca">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Brinquedoteca/imagemC01.jpeg" alt="Brinquedoteca organizada" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Brinquedoteca</span><span class="tile-qtd">6 fotos</span></span>
+          </button>
+          <button class="tile" type="button" data-categoria="area-de-servico">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Área de Serviço/imagemA02.jpeg" alt="Área de serviço organizada" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Área de serviço</span><span class="tile-qtd">5 fotos</span></span>
+          </button>
+          <button class="tile" type="button" data-categoria="banheiro">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Banheiro/imagemB03.jpeg" alt="Banheiro organizado" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Banheiro</span><span class="tile-qtd">4 fotos</span></span>
+          </button>
+          <button class="tile tile-largo" type="button" data-categoria="loucaria">
+            <span class="tile-midia"><img class="tile-img is-active" src="assets/img/Louçaria/imagemG02.jpg" alt="Louçaria organizada" loading="lazy"></span>
+            <span class="tile-legenda"><span class="tile-nome">Louçaria</span><span class="tile-qtd">15 fotos</span></span>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="podcast" class="secao">
-    <div class="container">
-      <h2>Mídia</h2>
-
-      <div class="video-embed" aria-label="Player do podcast">
-        <iframe
-          src="https://www.youtube.com/embed/xdUn2Am49Ks?si=6sQnUWMyP6J8M2WO"
-          title="Podcast - PodChique"
-          loading="lazy"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          ></iframe>
+    <!-- ===================== MÍDIA ===================== -->
+    <section class="midia" id="midia">
+      <div class="container midia-grid">
+        <div class="video" data-video-id="xdUn2Am49Ks">
+          <button class="video-capa" type="button" aria-label="Assistir ao episódio do PodChique">
+            <img src="https://i.ytimg.com/vi/xdUn2Am49Ks/hqdefault.jpg" alt="" loading="lazy">
+            <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          </button>
+        </div>
+        <div class="midia-texto">
+          <h2 class="titulo-secao">Mídia</h2>
+          <h3>PodChique: organizar a vida com auxílio profissional</h3>
+          <p>Um papo leve sobre a minha trajetória, os erros mais comuns que vejo no dia a dia e os primeiros passos que uso com minhas clientes para ganhar tempo e paz em casa.</p>
+          <a class="link-sublinhado" href="https://www.youtube.com/watch?v=xdUn2Am49Ks" target="_blank" rel="noopener">Assistir no YouTube</a>
+        </div>
       </div>
-      <p class="video-caption">
-        Estive no PodChique para um papo super leve sobre “Organizar a vida com auxílio profissional”. Contei um pouco da minha trajetória, os erros mais comuns que vejo no dia a dia e os primeiros passos que uso com minhas clientes para ganhar tempo e paz em casa. Se você quer começar hoje, tem dicas simples e realistas no episódio.
-      </p>
-    </div>
-  </section>
+    </section>
 
+    <!-- ===================== CONTATO ===================== -->
     <section class="contato" id="contato">
-      <div class="container">
-        <h2>Precisa dar uma organizada em casa?<br>Entre em contato!</h2>
-      </div>
-      <form class="formulario" onsubmit="enviarFormulario(event)">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <div class="linha">
-          <input type="tel" name="telefone" placeholder="Telefone" required>
-          <input type="email" name="email" placeholder="Email" required>
+      <div class="container contato-grid">
+        <div class="contato-texto">
+          <h2 class="titulo-secao">Precisa dar uma organizada em casa?</h2>
+          <p>Conte um pouco sobre o espaço e a sua rotina. Eu respondo pelo WhatsApp para combinarmos a visita técnica.</p>
+          <ul class="contato-lista">
+            <li>
+              <a href="https://wa.me/5511973806105" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/></svg>
+                (11) 97380-6105
+              </a>
+            </li>
+            <li>
+              <a href="mailto:fabiana.cozzolino@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3.5 6l8.5 7 8.5-7"/></svg>
+                fabiana.cozzolino@gmail.com
+              </a>
+            </li>
+            <li>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                São Paulo, SP
+              </span>
+            </li>
+          </ul>
         </div>
-        <textarea name="assunto" placeholder="Assunto" required></textarea>
-        <button>
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-              </svg>
+
+        <form class="formulario" id="form-contato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo-linha">
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
           </div>
-          <span>Enviar</span>
-        </button>
-      </form>
+          <div class="campo">
+            <label for="mensagem">O que você gostaria de organizar?</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+          </div>
+          <p class="form-erro" id="form-erro" role="alert" hidden>Preencha todos os campos para enviar a mensagem.</p>
+          <button class="btn btn-primario" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
     <div class="container">
-      <div class="coluna logo-footer">
-        <img src="assets/img/logo-branco.png" alt="Logo Fabi Tort" />
+      <div class="rodape-grid">
+        <img class="rodape-logo" src="assets/img/logo-branco.png" alt="Fabi Tort Organizer" width="1014" height="750" loading="lazy">
+        <nav class="rodape-links" aria-label="Rodapé">
+          <a href="#sobre">Sobre</a>
+          <a href="#como-trabalho">Como trabalho</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#organizacoes">Organizações</a>
+          <a href="#midia">Mídia</a>
+        </nav>
+        <div class="rodape-contato">
+          <h3>Contato</h3>
+          <a href="https://wa.me/5511973806105" target="_blank" rel="noopener">(11) 97380-6105</a>
+          <a href="mailto:fabiana.cozzolino@gmail.com">fabiana.cozzolino@gmail.com</a>
+          <span>São Paulo, SP</span>
+        </div>
       </div>
-      <div class="coluna links-footer">
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#como-trabalho">Como Trabalho</a>
-        <a href="#organizacoes">Organizações</a>
-        <a href="#contato">Contato</a>
-      </div>
-      <div class="coluna contato-footer">
-        <h3>Entre em contato</h3>
-       
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF4D8" viewBox="0 0 24 24">
-            <path d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
-          </svg>
-          (11) 9 7380-6105
-        </p>
-       
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF4D8" viewBox="0 0 24 24">
-            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18a2 2 0 0 0 2 2h16c1.1 0 2-.9 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          fabiana.cozzolino@gmail.com
-        </p>
-       
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF4D8" viewBox="0 0 24 24">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z"/>
-          </svg>
-          São Paulo/SP - Brasil
-        </p>
-      </div>
+      <p class="rodape-copy">© <span id="ano">2026</span> Fabi Tort Organizer</p>
     </div>
   </footer>
 
+  <!-- ===================== BOTÃO FLUTUANTE DO WHATSAPP ===================== -->
+  <a class="whatsapp-flutuante" href="https://wa.me/5511973806105" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.5c.3 2.9 3.6 6.2 6.5 6.5l1-1.6-2-1-1 .9c-1-.4-2.4-1.8-2.8-2.8l.9-1-1-2z"/></svg>
+  </a>
 
-  <script src="script.js"></script>
+  <!-- ===================== GALERIA EM TELA CHEIA ===================== -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-titulo">
+    <div class="lightbox-topo">
+      <div>
+        <h2 class="lightbox-titulo" id="lightbox-titulo">Categoria</h2>
+        <p class="lightbox-contador" id="lightbox-contador" aria-live="polite">Foto 1 de 1</p>
+      </div>
+      <button class="lightbox-btn lightbox-fechar" type="button" aria-label="Fechar galeria">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <div class="lightbox-palco">
+      <button class="lightbox-btn lightbox-anterior" type="button" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <img class="lightbox-img" id="lightbox-img" alt="">
+      <button class="lightbox-btn lightbox-proxima" type="button" aria-label="Próxima foto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="lightbox-miniaturas" id="lightbox-miniaturas"></div>
+  </dialog>
 </body>
 </html>
